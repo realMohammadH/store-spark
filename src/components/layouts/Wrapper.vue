@@ -1,12 +1,8 @@
-<script setup>
-import { defineProps } from "vue";
+<script setup lang="ts">
+import { defineProps, type PropType } from "vue";
 const props = defineProps({
-  padding: {
-    type: String,
-  },
-  textFlow: {
-    type: String,
-  },
+  padding: String,
+  textFlow: String as PropType<"left" | "center" | "right" | "justify">,
 });
 </script>
 

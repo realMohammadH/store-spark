@@ -3,7 +3,11 @@ import Hero from "./components/pages/Hero.vue";
 </script>
 
 <template>
-  <hero></hero>
+  <main>
+    <hero>
+      
+    </hero>
+  </main>
 </template>
 
 <style scoped>
