@@ -2,6 +2,10 @@ import { createApp } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
+import Splitting from "splitting";
+import Lenis from "@studio-freight/lenis";
 import "./style.css";
 import App from "./App.vue";
 
@@ -30,5 +34,7 @@ app.component("base-button", BaseButton);
 app.component("container", Container);
 app.component("section-wrapper", SectionWrapper);
 
+// app.use(Lenis);
+app.use(Splitting);
 app.use(renderImage);
 app.mount("#app");

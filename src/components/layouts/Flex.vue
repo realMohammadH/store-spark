@@ -6,7 +6,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="flex" :style="props.gap">
+  <div class="flex" :style="{ gap: props.gap }">
     <slot></slot>
   </div>
 </template>
