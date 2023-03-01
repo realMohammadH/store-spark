@@ -5,7 +5,7 @@ const props = defineProps({
   textFlow: String as PropType<"left" | "center" | "right" | "justify">,
   width: String,
   height: String,
-  margin: String,
+  margin: 
 });
 </script>
 

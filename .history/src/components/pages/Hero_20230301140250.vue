@@ -53,7 +53,7 @@ onMounted(() => {
             subscription. No contracts, cancel anytime.
           </text-sub-title>
           <wrapper>
-            <base-button :dark="true" padding="20px 40px" margin="0 20px">
+            <base-button :dark="true" padding="20px 40px" margin="">
               See plans
             </base-button>
             <base-button :light="true" padding="20px 40px">

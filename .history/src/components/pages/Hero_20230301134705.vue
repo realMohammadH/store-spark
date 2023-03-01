@@ -18,6 +18,7 @@ onMounted(() => {
   const results = Splitting(myText);
   let myDuration = 2;
   results[0].chars.forEach((char) => {
+
     gsap.fromTo(
       char,
       { opacity: 0, y: -80, x: -80 },
@@ -52,14 +53,6 @@ onMounted(() => {
             need of hiring freelance or in-house specialists. Fixed monthly
             subscription. No contracts, cancel anytime.
           </text-sub-title>
-          <wrapper>
-            <base-button :dark="true" padding="20px 40px" margin="0 20px">
-              See plans
-            </base-button>
-            <base-button :light="true" padding="20px 40px">
-              Book a call
-            </base-button>
-          </wrapper>
         </wrapper>
         <wrapper width="50%">
           <image-wrapper

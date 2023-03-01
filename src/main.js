@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 import "splitting/dist/splitting.css";
 import "splitting/dist/splitting-cells.css";
 import Splitting from "splitting";
-import Lenis from "@studio-freight/lenis";
+// import Lenis from "@studio-freight/lenis";
 import "./style.css";
 import App from "./App.vue";
 

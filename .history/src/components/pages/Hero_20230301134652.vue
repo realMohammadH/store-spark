@@ -13,11 +13,38 @@ const text_title = ref(null);
 onMounted(() => {
   Splitting();
 
+  // const fx1Titles = [...document.querySelectorAll("[data-splitting]")];
+
   const myText = text_title.value.$el;
 
   const results = Splitting(myText);
   let myDuration = 2;
+  // const charsTotal = results[0].chars.length;
   results[0].chars.forEach((char) => {
+    // gsap.fromTo(
+    //   chars,
+    //   {
+    //     "will-change": "transform",
+    //     y: (position) => {
+    //       const factor =
+    //         position < Math.ceil(charsTotal / 2)
+    //           ? position
+    //           : Math.ceil(charsTotal / 2) -
+    //             Math.abs(Math.floor(charsTotal / 2) - position) -
+    //             1;
+    //       return (charsTotal / 2 - factor + 6) * 130;
+    //     },
+    //   },
+    //   {
+    //     duration: myDuration,
+    //     ease: "elastic.out(.4)",
+    //     y: 0,
+    //     stagger: {
+    //       amount: 0.1,
+    //       from: "center",
+    //     },
+    //   }
+    // );
     gsap.fromTo(
       char,
       { opacity: 0, y: -80, x: -80 },
@@ -52,14 +79,6 @@ onMounted(() => {
             need of hiring freelance or in-house specialists. Fixed monthly
             subscription. No contracts, cancel anytime.
           </text-sub-title>
-          <wrapper>
-            <base-button :dark="true" padding="20px 40px" margin="0 20px">
-              See plans
-            </base-button>
-            <base-button :light="true" padding="20px 40px">
-              Book a call
-            </base-button>
-          </wrapper>
         </wrapper>
         <wrapper width="50%">
           <image-wrapper

@@ -5,7 +5,6 @@ const props = defineProps({
   textFlow: String as PropType<"left" | "center" | "right" | "justify">,
   width: String,
   height: String,
-  margin: String,
 });
 </script>
 
@@ -24,7 +23,7 @@ const props = defineProps({
 </template>
 
 <style scoped>
-.wrapper :is(h2 + *, h3 + *, h4 + *) {
-  margin-block-start: 0.5rem !important;
+.wrapper > * {
+  margin-block-start: 1.5rem;
 }
 </style>

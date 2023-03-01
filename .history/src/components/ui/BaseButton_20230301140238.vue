@@ -14,7 +14,7 @@ const props = defineProps({
     href="#"
     class="btn"
     :class="{ dark: props.dark, light: props.light }"
-    :style="{ padding: props.padding, marginInline: props.margin }"
+    :style="{ padding: props.padding, marginI: props.margin }"
   >
     <slot />
   </a>
