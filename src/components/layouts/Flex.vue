@@ -1,12 +1,21 @@
 <script setup lang="ts">
-import { ref, defineProps } from "vue";
-const props = defineProps<{
-  gap?: string;
-}>();
+import { ref, defineProps, PropType } from "vue";
+const props = defineProps({
+  gap: String,
+  flexWrap: String as PropType<"wrap" | "nowrap">,
+  flow: String as PropType<"row" | "row-reverse" | "column" | "column-reverse">,
+});
 </script>
 
 <template>
-  <div class="flex" :style="{ gap: props.gap }">
+  <div
+    class="flex"
+    :style="{
+      gap: props.gap,
+      flexWrap: props.flexWrap,
+      flexDirection: props.flow,
+    }"
+  >
     <slot></slot>
   </div>
 </template>

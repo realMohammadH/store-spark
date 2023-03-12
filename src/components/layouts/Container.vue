@@ -1,5 +1,4 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <article class="container">
@@ -9,7 +8,8 @@
 
 <style scoped>
 .container {
-  width: 1140px;
+  position: relative;
+  width: 1240px;
   margin: 0 auto;
 }
 </style>

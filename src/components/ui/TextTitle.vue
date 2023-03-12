@@ -4,13 +4,18 @@ import { ref, defineProps } from "vue";
 const props = defineProps({
   fontSize: String,
   fontWeight: Number,
+  lineHeight: String,
 });
 </script>
 
 <template>
   <h2
     class="text-title"
-    :style="{ fontSize: props.fontSize, fontWeight: props.fontWeight }"
+    :style="{
+      fontSize: props.fontSize,
+      fontWeight: props.fontWeight,
+      lineHeight: props.lineHeight,
+    }"
   >
     <slot></slot>
   </h2>
@@ -20,7 +25,5 @@ const props = defineProps({
 .text-title {
   color: #111111;
   font-weight: 700;
-  text-align: start;
-  line-height: 65px;
 }
 </style>

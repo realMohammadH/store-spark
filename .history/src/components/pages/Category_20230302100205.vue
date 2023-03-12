@@ -1,0 +1,90 @@
+<script setup>
+import { ref, onMounted, computed } from "vue";
+
+const cards = ref([
+  {
+    imageCard: {
+      path: "../../assets/images/category-img-1.png",
+      floatImage: {
+        path: "../../assets/images/category-img-1-floatImg.png",
+        width: "224px",
+        height: "282px",
+      },
+    },
+    textCard: {
+      title: "Theme development and customization",
+      description:
+        "Transform your store from something that looks like a default template into something that looks like you.",
+      features: [
+        "Shopify theme set up",
+        "Theme upgrade",
+        "Functionality review",
+        "Custom feature implementation",
+      ],
+    },
+  },
+  {
+    imageCard: {
+      path: "../../assets/images/category-img-2.png",
+      floatImage: {
+        path: "../../assets/images/category-img-2-floatImg.png",
+        width: "184px",
+        height: "195px",
+      },
+    },
+    textCard: {
+      title: "Design and graphic tasks",
+      description:
+        "Transform your store from something that looks like a default template into something that looks like you.",
+      features: [
+        "Shopify theme set up",
+        "Theme upgrade",
+        "Functionality review",
+        "Custom feature implementation",
+      ],
+    },
+  },
+  {
+    imageCard: {
+      path: "../../assets/images/category-img-3.png",
+    },
+    textCard: {
+      title: "Troubleshooting and maintenance",
+      description:
+        "Fix bugs, troubleshoot or audit your store for potential issues in a jiffy.",
+      features: [
+        "Site speed audits",
+        "Urgent bug fixes",
+        "App and theme conflicts",
+        "App installs and configuration",
+      ],
+    },
+  },
+]);
+</script>
+
+<template>
+  <section-wrapper class="category">
+    <container>
+      <grid>
+        <flex v-for="card in cards">
+          <wrapper class="cards" width="50%">
+            <image-wrapper
+              :mainImg="$renderImage(card.imageCard.path)"
+            ></image-wrapper>
+          </wrapper>
+          <wrapper width="50%">
+            <text-title></text-title>
+            <text-sub-title></text-sub-title>
+          </wrapper>
+        </flex>
+      </grid>
+    </container>
+  </section-wrapper>
+</template>
+
+<style scoped>
+.category:deep(.grid):deep(.wrapper):nth-child(even) {
+  order: 1;
+}
+</style>

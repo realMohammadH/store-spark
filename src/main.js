@@ -22,8 +22,10 @@ import Flex from "./components/layouts/Flex.vue";
 import Grid from "./components/layouts/Grid.vue";
 import TextTitle from "./components/ui/TextTitle.vue";
 import TextSubTitle from "./components/ui/TextSubTitle.vue";
+import Card from "./components/ui/Card.vue";
 
 const app = createApp(App);
+app.component("card", Card);
 app.component("text-sub-title", TextSubTitle);
 app.component("text-title", TextTitle);
 app.component("grid", Grid);

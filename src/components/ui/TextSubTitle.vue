@@ -12,5 +12,6 @@ import { ref, defineProps } from "vue";
 .text-sub_title {
   font-weight: 300;
   color: #555555;
+  line-height: 28px;
 }
 </style>

@@ -1,0 +1,69 @@
+<script setup>
+import { ref, onMounted, computed } from "vue";
+
+const cards = ref([
+  {
+    imageCard: {
+      path: "../../assets/images/category-img-1.png",
+      floatImage: "../../assets/images/category-img-1-floatImg.png",
+    },
+    textCard: {
+      title: "Theme development and customization",
+      description:
+        "Transform your store from something that looks like a default template into something that looks like you.",
+      features: [
+        "Shopify theme set up",
+        "Theme upgrade",
+        "Functionality review",
+        "Custom feature implementation",
+      ],
+    },
+  },
+  {
+    imageCard: {
+      path: "../../assets/images/category-img-2.png",
+      floatImage: "../../assets/images/category-img-2-floatImg.png",
+    },
+   textCard: {
+      title: "Theme development and customization",
+      description:
+        "Create beautiful designs for any page or for marketing assets and watch the eyeballs roll in.",
+      features: [
+        "User interface store reviews",
+        "Full page mockups",
+        "Email newsletter designs",
+        "Banners and pop-ups",
+      ],
+    },
+  },
+  {
+    imageCard: {
+      path: "../../assets/images/category-img-3.png",
+    },
+    textCard: {
+      title: "Theme development and customization",
+      description:
+        "Create beautiful designs for any page or for marketing assets and watch the eyeballs roll in.",
+      features: [
+        "User interface store reviews",
+        "Full page mockups",
+        "Email newsletter designs",
+        "Banners and pop-ups",
+      ],
+    },
+  },
+]);
+</script>
+
+<template>
+  <section-wrapper class="category">
+    <container>
+      <grid>
+        <!-- <flex v-for=""> </flex> -->
+      </grid>
+    </container>
+  </section-wrapper>
+</template>
+
+<style scoped>
+</style>
